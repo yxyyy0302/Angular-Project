@@ -5,6 +5,7 @@
 body {
   margin: 0;
   background-image: url('https://wallpapers.com/images/hd/simple-anime-qvr19zmur82jyryl.jpg');
+  background-size: cover;
 }
 
 h1,
@@ -22,32 +23,32 @@ h3 {
   text-transform: uppercase;
 }
 
-#menu-bar {
+#menu {
   background: rgb(140, 4, 63);
   color: #fff;
   padding: 10px;
 }
 
-#menu-bar h1 {
+#menu h1 {
   font-size: 24px;
   font-weight: normal;
   display: inline-block;
 }
 
-#menu-bar ul {
+#menu ul {
   float: right;
   list-style-type: none;
   padding: 0;
   margin: 6px 0;
 }
 
-#menu-bar li {
+#menu li {
   float: right;
   margin-left: 20px;
   font-size:18px;
 }
 
-#menu-bar a {
+#menu a {
   color: #fff;
 }
 
