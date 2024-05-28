@@ -1,0 +1,25 @@
+
+    <div class = "content"> 
+          <button ng-click = "order = 'age' ">Order By Character Age</button>
+          <button ng-click = "order = 'rank' ">Order By Character Rank</button>
+          <br>
+          <input type = "text" ng-model = "search" placeholder = "Search for a character" id = "long">
+          <ul id = "character-list">
+            <li ng-repeat = "character in characters | orderBy: order | filter: search"> <!--ng-show = "character.like"-->
+              <img ng-src = "{{character.thumb}}" style = "margin: -12px 10px 0 0; float: left; width:50px;" ng-show = "character.thumb">
+              <h3>Name: {{character.name}}, Age: {{character.age}}</h3> <!--| currency: '$'-->
+              <div class = "remove" ng-click = "removeCharacter(character)">x</div>
+              <span class="character" ng-style="{'background-color': character.color}">Rank: {{character.rank}}</span>
+            </li> 
+          </ul>
+          <h3>Try adding a character you like (won't have a thumbnail picture):</h3>
+          <form ng-submit = "addCharacter()">
+            <input type = "text" placeholder = "Name" ng-model = "newcharacter.name">
+            <input type = "text" placeholder = "Age" ng-model = "newcharacter.age">
+            <input type = "text" placeholder = "Color" ng-model = "newcharacter.color">
+            <input type = "text" placeholder = "Rank" ng-model = "newcharacter.rank">
+            <input type = "submit" value = "Add new character">
+          </form>
+          <a href = "" ng-click = "removeAll()">Remove all characters</a>
+      </div>
+    

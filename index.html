@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myCharacterApp">
+  <head>
+    <title>SimpleAnimeCharacterRanking</title>
+    <link href="style/style.css" rel="stylesheet" type="text/css" />
+    <script src = "app/lib/angular.min.js"></script>
+    <script src="app\lib\angular-route.min.js"></script>
+    <script src="app\lib\angular-animate.min.js"></script>
+    <script src = "app\lib\app.js"></script>
+  </head>
+
+  <body>
+    <!--need '' within ""-->
+    <!--<ng-include src = "'header.html'"></ng-include>-->   
+    <header ng-include src = "'header.html'"></header>  <!--semantically better-->
+    <main ng-view></main>
+  </body>
+
+</html>
+

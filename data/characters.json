@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Nagito Komaeda",
+        "age": 22,
+        "color": "rgb(96, 171, 5)",
+        "rank": 1,
+        "thumb": "img/nagitothumb.jpg"
+    },
+    {
+        "name": "Jabami Yumeko",
+        "age": 16,
+        "color": "rgb(199, 10, 35)",
+        "rank": 2,
+        "thumb": "img/jabamiyumekothumb.jpg"
+    },
+    {
+        "name": "Nao Tomori",
+        "age": 15,
+        "color": "rgb(8, 138, 199)",
+        "rank": 3,
+        "thumb": "img/naotomorithumb.jpg"
+    },
+    {
+        "name": "L",
+        "age": 22,
+        "color": "black",
+        "rank": 4,
+        "thumb": "img/lthumb.jpg"
+    }
+]
