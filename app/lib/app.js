@@ -7,8 +7,8 @@ myCharacterApp.config(['$routeProvider', function($routeProvider){
         templateUrl: 'views/home.html',
         controller: 'CharacterController'
     })
-    .when('/directory', {
-        templateUrl: 'views/directory.html',
+    .when('/list', {
+        templateUrl: 'views/list.html',
         controller: 'CharacterController'
     })
     .when('/contact', {
@@ -24,19 +24,17 @@ myCharacterApp.config(['$routeProvider', function($routeProvider){
     });
 }]);
 
-//executes before running
 myCharacterApp.config(function(){
 
 });
 
-//executes when running
 myCharacterApp.run(function(){
 
 });
 
 myCharacterApp.directive('randomCharacter', [function(){
     return{
-        restrict: 'E', //A: attribute, E: element, C: classes, M: comments, can do something like EA
+        restrict: 'EA', 
         scope: {
             characters: '=',
             title: '='
@@ -45,19 +43,23 @@ myCharacterApp.directive('randomCharacter', [function(){
         transclude: true,
         replace: true,
         controller: function($scope){
-            $scope.random = Math.floor(Math.random() * 4);
+            $scope.random = Math.floor(Math.random() * 5);
         }
     };
 }]);
 
-//manages specific controller
-myCharacterApp.controller('CharacterController', ['$scope', '$http', function($scope, $http){  //always somethingController
+myCharacterApp.controller('CharacterController', ['$scope', '$http', function($scope, $http){  
+
+    
+    $http.get('data/characters.json').then(function(response){
+        $scope.characters = response.data;
+    });
 
     $scope.addCharacter = function(){
         if ($scope.newcharacter.name !== "" && !isNaN($scope.newcharacter.age) && $scope.newcharacter.color !== "" && !isNaN($scope.newcharacter.rank))
         $scope.characters.push({
             name: $scope.newcharacter.name,
-            age: parseInt($scope.newcharacter.rank),
+            age: parseInt($scope.newcharacter.age),
             color: $scope.newcharacter.color,
             rank: parseInt($scope.newcharacter.rank),
             
@@ -69,19 +71,14 @@ myCharacterApp.controller('CharacterController', ['$scope', '$http', function($s
         $scope.newcharacter.rank = "";
     };
 
-
-    $scope.removeAll = function(){
-        $scope.characters = [];
-    }
-
     $scope.removeCharacter = function(character){
         let removedCharacter = $scope.characters.indexOf(character);
         $scope.characters.splice(removedCharacter, 1);
     };
 
-    $http.get('data/characters.json').then(function(response){
-        $scope.characters = response.data;
-    });
+    $scope.removeAll = function(){
+        $scope.characters = [];
+    }
     
 }]); 
 

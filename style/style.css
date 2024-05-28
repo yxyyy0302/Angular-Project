@@ -2,6 +2,10 @@
   font-family: 'Trebuchet MS', sans-serif;
 }
 
+#center{
+  text-align: center;
+}
+
 body {
   margin: 0;
   background-image: url('https://wallpapers.com/images/hd/simple-anime-qvr19zmur82jyryl.jpg');
@@ -14,13 +18,11 @@ h3 {
   margin: 0;
 }
 
-.character {
+.rank {
   padding: 5px 10px;
   border-radius: 10px;
-  margin-left: 5px;
   color: #fff;
   font-size: 15px;
-  text-transform: uppercase;
 }
 
 #menu {
@@ -59,13 +61,13 @@ main {
   border-radius: 10px;
 }
 
-.content {
+.body-content {
   padding: 20px;
   overflow: hidden;
 }
 
-.content button,
-.content input[type="submit"] {
+.body-content button,
+.body-content input[type="submit"] {
   background: #fff;
   padding: 10px;
   border-radius: 10px;
@@ -76,33 +78,33 @@ main {
   font-size: 16px;
 }
 
-.content button:nth-child(2) {
+.body-content button:nth-child(2) {
   float: right;
 }
 
-.content ul {
+.body-content ul {
   padding: 0;
   list-style-type: none;
   margin: 30px 0;
 }
 
-.content li {
+.body-content li {
   padding: 15px 0;
   border-top: 1px solid #e2e2e2;
   color: #444;
 }
 
-.content li span {
+.body-content li span {
   float: right;
 }
 
-.content li h3 {
+.body-content li h3 {
   display: inline-block;
   font-weight: normal;
   font-size: 22px;
 }
 
-.content input, .content textarea {
+.body-content input, .body-content textarea {
   font-size:15px;
   width: 270px; 
   padding: 10px 5%;
@@ -116,7 +118,7 @@ main {
   text-align: center;
 }
 
-.content input[type="submit"]:last-child {
+.body-content input[type="submit"]:last-child {
   width: 150px;
   display: block;
   margin: 15px auto;
@@ -138,7 +140,7 @@ input[disabled = "disabled"]{
   width: 18px;
   text-align: center;
   border-radius: 20px;
-  color: crimson;
+  color: red;
   cursor: pointer;
   margin-left: 10px;
 }

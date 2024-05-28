@@ -26,5 +26,12 @@
         "color": "black",
         "rank": 4,
         "thumb": "img/lthumb.jpg"
+    },
+    {
+        "name": "Satoru Gojo",
+        "age": 28,
+        "color": "gray",
+        "rank": 5,
+        "thumb": "img/satorugojothumb.jpg"
     }
 ]

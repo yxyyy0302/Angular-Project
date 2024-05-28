@@ -1,0 +1,28 @@
+
+    <div class = "body-content"> 
+          <button ng-click = "order = 'age' ">Order By Character Age</button>
+          <button ng-click = "order = 'rank' ">Order By Character Rank</button>
+          <br>
+          <input type = "text" ng-model = "search" placeholder = "Search for a character" id = "long" style = "font-size:17px">
+          <ul id = "character-list">
+            <li ng-repeat = "character in characters | orderBy: order | filter: search"> 
+              <img ng-src = "{{character.thumb}}" style = "margin: -12px 10px 0 0; float: left; width:50px;" ng-show = "character.thumb">
+              <h3>Name: {{character.name}}, Age: {{character.age}}</h3>
+              <div class = "remove" ng-click = "removeCharacter(character)">x</div>
+              <span class="rank" ng-style="{'background-color': character.color}">RANK: {{character.rank}}</span>
+            </li> 
+          </ul>
+          <div id = "center">
+            <h3>Try adding a character you like (won't have a thumbnail picture):</h3>
+            <form ng-submit = "addCharacter()">
+              <input type = "text" placeholder = "Name" ng-model = "newcharacter.name" style = "font-size:17px">
+              <input type = "text" placeholder = "Age" ng-model = "newcharacter.age" style = "font-size:17px">
+              <input type = "text" placeholder = "Color" ng-model = "newcharacter.color" style = "font-size:17px">
+              <input type = "text" placeholder = "Rank" ng-model = "newcharacter.rank" style = "font-size:17px">
+              <input type = "submit" value = "Add new character" style = "font-size:16px">
+            </form>
+          </div>
+       
+          <a href = "" ng-click = "removeAll()" style = "font-size:18px">Remove all characters</a>
+      </div>
+    
