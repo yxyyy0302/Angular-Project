@@ -6,4 +6,4 @@ A link to the webpage for this project: https://yxyyy0302.github.io/Angular-Proj
 
 You can add anime characters, search for characters, order characters, and delete characters.
 
-I might come back and add more features to this in the future if I want to use AngularJS more.
+Might come back and add more features to this in the future if I want to use AngularJS more.
